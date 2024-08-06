@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate</title>
+    <link href="../output.css" rel="stylesheet" />
+    <style>
+      .hover-item::after{
+        content:'';
+        display:block;
+        width:0;
+        height:5px;
+        background-color: #458ACB;
+        transition: width 0.3s;
+      }
+      .hover-item:hover::after{
+        width:100%;
+      }
+
+      .hover-item1::after{
+        content:'';
+        position: relative;
+        top:10px;
+        display:block;
+        width:0;
+        height:5px;
+        background-color: #458ACB;
+        transition: width 0.5s;
+      }
+      .hover-item1:hover::after{
+        width:63%;
+      }
+
+      .hover-item2::after{
+        content:'';
+        position: relative;
+        top:10px;
+        display:block;
+        width:0;
+        height:5px;
+        background-color: #458ACB;
+        transition: width 0.5s;
+      }
+      .hover-item2:hover::after{
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+
+    <!--nav bar -->
+    <nav
+      class="bg-[#2b2b2b] text-white max-w-[100%] h-14 flex items-center justify-around sm:justify-between sm:px-10 px-5 lg:hidden"
+    >
+      <div><h1>Elite Estate Management</h1></div>
+      <div><img src="/images/icons8-menu-50.png" alt="" /></div>
+    </nav>
+
+    <nav class="bg-[#2b2b2b] z-20">
+      <div
+        class="text-white max-w-[1800px] h-14 mx-auto hidden lg:flex items-center justify-around font-robotoSlab"
+      >
+        <div class="text-xl font-medium px-6 font-robotoSlab">Elite State Management</div>
+
+        <div class="basis-[70%]">
+          <ul class="flex justify-around">
+            <li class=" font-bold">Home</li>
+            <li class=" font-bold ">About</li>
+            <li class=" font-bold ">Services</li>
+            <li class=" font-bold ">Contact</li>
+            <li class=" font-bold ">Articles</li>
+            <li class="font-bold ">Portfolio</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--  main section -->
+    <section class="bg-[#393939] max-w-[100%] text-white pl-6 pt-4 lg:flex">
+      <div
+        class="lg:flex lg:flex-col lg:justify-around lg:ml-20 lg:basis-[50%]"
+      >
+        <!-- main section for text -->
+        <div class="flex flex-col justify-around font-robotoSlab lg:gap-5">
+          <h1 class="leading-10 text-2xl lg:text-5xl lg:font ">
+            We provide architechtural design and construction
+          </h1>
+          <p class="leading-10 mt-2 lg:text-xl lg:font-light">
+            ​More than 100 building and housing projects that we have built. The
+            building owner chose us over other contractors in Jakartabecause our
+            work is different
+          </p>
+          <div>
+            <button
+              class="self-start bg-gradient-to-r from-sky-300 to-sky-600 mt-4 p-3 hover:scale-105"
+            >
+              Discover More
+            </button>
+          </div>
+        </div>
+
+        <!-- blue section for large -->
+        <section class="hidden lg:flex">
+          <div class="grid grid-cols-3 gap-5 font-robotoSlab">
+            <div class="">
+              <h1 class="text-2xl font-bold">300+</h1>
+              <h1 class="font-semibold">Happy Client</h1>
+            </div>
+
+            <div class="">
+              <h1 class="text-2xl font-bold">900+</h1>
+              <h1 class="font-semibold">Amazing Projects</h1>
+            </div>
+
+            <div class="">
+              <h1 class="text-2xl font-bold">20+</h1>
+              <h1 class="font-semibold">Award Winnings</h1>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- main section image -->
+      <div class="basis-[50%] flex justify-end -mt-20 z-10">
+        <div>
+          <img
+            class="hover:scale-95 hover:translate-x-3 "
+            src="/images/big_hero_image.png"
+            alt=""
+          />
+        </div>
+
+        <div class="bg-gradient-to-r from-sky-300 to-sky-600 absolute top-[765px] right-[0px] hidden hover:scale-90 lg:flex">
+          <!-- blue section -->
+          <div class="max-w-[900px] lg:max-w-[1100px] max-h-[260px] py-4 px-10 grid grid-cols-3 items-center justify-items-center
+          font-dancingScript">
+            <div>
+              <h1 class="text-2xl font-bold">General Project</h1>
+            </div>
+            <div>
+              <p class="tracking-wider">
+                <span class="text-3xl font-bold">25</span> Years
+              </p>
+              <p class="text-2xl tracking-wider">Operated</p>
+            </div>
+            <div>
+              <p class="text-[27px]">As a trusted general project that has been
+                operating for 25 years, our commitment is
+                always to prioritize our client satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- blue section -->
+    <section
+      class="px-4 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white lg:hidden"
+    >
+      <!-- blue section first -->
+      <div class="flex justify-between px-4">
+        <div>
+          <p class="tracking-wider">
+            <span class="text-3xl font-bold">25</span> Years
+          </p>
+          <p class="text-2xl tracking-wider">Operated</p>
+        </div>
+        <img class="h-14 w-14" src="/images/icons8-home.svg" alt="" />
+      </div>
+
+      <!-- blue section text -->
+      <div class="">
+        <p class="px-4 py-4">
+          As a trusted general project that has been operating for 25 years, our
+          commitment is always to prioritize our client satisfaction.
+        </p>
+      </div>
+
+      <!-- blue section grid cols -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="px-4">
+          <h1 class="text-2xl font-bold">300+</h1>
+          <h1 class="font-semibold">Happy Client</h1>
+        </div>
+
+        <div class="px-4">
+          <h1 class="text-2xl font-bold">900+</h1>
+          <h1 class="font-semibold">Amazing Projects</h1>
+        </div>
+
+        <div class="px-4">
+          <h1 class="text-2xl font-bold">20+</h1>
+          <h1 class="font-semibold">Award Winnings</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- our excellent services section -->
+    <section class="bg-white max-w-[100%] m-6">
+      <!-- excellent services text div -->
+      <div class="lg:flex lg:mx-24 lg:my-16 lg:gap-6 lg:items-center">
+        <h1
+          class="basis-[50%] text-2xl font-bold text-center lg:text-start lg:text-5xl pb-2 font-robotoSlab"
+        >
+          Our Excellent Services
+        </h1>
+        <p
+          class="basis-[50%] text-sm font-mono text-center lg:text-balance lg:text-xl"
+        >
+          Check out our best service you can possibly orders in building your
+          company and don't forget to ask via our email or our customer service
+          if you are interested in using our services.
+        </p>
+      </div>
+
+      <!-- excellent grid -->
+      <div class="grid my-4 text-center lg:flex lg:mx-24">
+        <div
+          class="border border-white shadow-xl px-3 py-5 mb-3 group hover:translate-y-[-10px] duration-[0.5s]"
+        >
+          <img
+            class="group-hover:scale-95 lg:h-[450px] lg:w-96"
+            src="/images/industrial.jpeg"
+            alt=""
+          />
+          <h1 class="font-bold text-xl">Industrial</h1>
+          <p class="leading-8">
+            Industrial development is our main line of business. We do Factory
+            Construction, Warehouse and others
+          </p>
+        </div>
+
+        <div
+          class="border border-white shadow-xl px-3 py-5 mb-3 group hover:translate-y-[-10px] duration-[0.5s]"
+        >
+          <img
+            class="group-hover:scale-95 lg:h-[450px] lg:w-96"
+            src="/images/commercial.jpeg"
+            alt=""
+          />
+          <h1 class="font-bold text-xl">Commercial</h1>
+          <p class="leading-8">
+            Our experience building in the Commercial field includes Showrooms,
+            Supermalls and Office Buildings
+          </p>
+        </div>
+
+        <div
+          class="border border-white shadow-xl px-3 py-5 mb-3 group hover:translate-y-[-10px] duration-[0.5s]"
+        >
+          <img
+            class="group-hover:scale-95 lg:h-[450px] lg:w-96"
+            src="/images/residential.jpeg"
+            alt=""
+          />
+          <h1 class="font-bold text-xl">Residential</h1>
+          <p class="leading-8">
+            Residential development is the beginning that has shaped us to this
+            day. Our development includes Houses & Apartments
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- what makes us different -->
+    <section
+      class="bg-white max-w-[100%] mt-6 mb-4 mx-8 lg:mx-24 lg:my-16 lg:flex lg:items-center"
+    >
+      <!-- heading -->
+      <div
+        class="basis-[50%] px-4 text-3xl lg:text-5xl font-bold tracking-wider font-robotoSlab"
+      >
+        What makes us different?
+      </div>
+      <!-- text -->
+      <div class="basis-[50%]">
+        <p class="p-4 text-xl tracking-wide font-mono">
+          Check out our best service you can possibly orders in building your
+          company and don't forget to ask via our email or our customer service
+          if you are interested in using our services
+        </p>
+      </div>
+    </section>
+
+    <!-- grid 2  -->
+    <section
+      class="max-w-[100%] mx-10 my-6 bg-white flex flex-col gap-3 lg:flex lg:flex-row lg:mx-24 lg:my-16 md:grid grid-cols-2 font-robotoSlab"
+    >
+      <div
+        class="px-4 flex flex-col items-center lg:items-start gap-3 my-4 hover-item hover:scale-95 hover:shadow-lg"
+      >
+        <img
+          class="h-16 w-16"
+          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20fill%3D%22%23d2d6d8%22%20d%3D%22M54%2C26V56a3%2C3%2C0%2C0%2C1-3%2C3H13a3%2C3%2C0%2C0%2C1-3-3V26%22%20class%3D%22colord8d5d2%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23f9f9f9%22%20d%3D%22M42%2C54H13a3.1%2C3.1%2C0%2C0%2C1-3-3.2V10.2A3.1%2C3.1%2C0%2C0%2C1%2C13%2C7H51a3.1%2C3.1%2C0%2C0%2C1%2C3%2C3.2V42.25a3.1%2C3.1%2C0%2C0%2C1-3%2C3.2H48a3.11%2C3.11%2C0%2C0%2C0-3%2C3.21V50.8A3.1%2C3.1%2C0%2C0%2C1%2C42%2C54Z%22%20class%3D%22colorf9f9f9%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%2387ddfd%22%20d%3D%22M13%2C7H51a3%2C3%2C0%2C0%2C1%2C3%2C3V20a0%2C0%2C0%2C0%2C1%2C0%2C0H10a0%2C0%2C0%2C0%2C1%2C0%2C0V10A3%2C3%2C0%2C0%2C1%2C13%2C7Z%22%20class%3D%22color93c6e7%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23eaeaea%22%20d%3D%22M54%2C43v3a8%2C8%2C0%2C0%2C1-8%2C8H42a3.1%2C3.1%2C0%2C0%2C0%2C3-3.2V48.66a3.11%2C3.11%2C0%2C0%2C1%2C3-3.21h3a3.1%2C3.1%2C0%2C0%2C0%2C3-3.2%22%20class%3D%22coloreaeaea%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M54%2C17H46a1%2C1%2C0%2C0%2C1%2C0-2h8a1%2C1%2C0%2C0%2C1%2C0%2C2Z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Cg%20class%3D%22color000000%20svgShape%22%20opacity%3D%22.3%22%3E%3Cpath%20fill%3D%22%23598596%22%20d%3D%22M13%2C17V54a3.1%2C3.1%2C0%2C0%2C1-3-3.2V10.2A3.1%2C3.1%2C0%2C0%2C1%2C13%2C7h3a3.1%2C3.1%2C0%2C0%2C0-3%2C3.2V17Z%22%20class%3D%22color598096%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23598596%22%20d%3D%22M16%2C54H13V50.8A3.1%2C3.1%2C0%2C0%2C0%2C16%2C54Z%22%20class%3D%22color598096%20svgShape%22%2F%3E%3C%2Fg%3E%3Cpath%20fill%3D%22%239b9b9b%22%20d%3D%22M16%2C59H13a3%2C3%2C0%2C0%2C1-3-3V50.8A3.1%2C3.1%2C0%2C0%2C0%2C13%2C54v2A3%2C3%2C0%2C0%2C0%2C16%2C59Z%22%20class%3D%22color9b9b9b%20svgShape%22%20opacity%3D%22.3%22%2F%3E%3Cpath%20fill%3D%22%23598596%22%20d%3D%22M24%207v3a2%202%200%2001-3.82.82A2%202%200%200021%2011a2%202%200%20002-2V7zM46%207v3a2%202%200%2001-3.82.82A2%202%200%200043%2011a2%202%200%20002-2V7z%22%20class%3D%22color598096%20svgShape%22%20opacity%3D%22.3%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M46%2055H42a1%201%200%20010-2%202.11%202.11%200%20002-2.2V48.66a4.11%204.11%200%20014-4.21h3a2.11%202.11%200%20002-2.2%201%201%200%20012%200%204.36%204.36%200%20010%20.51A1%201%200%200155%2043v3A9%209%200%200146%2055zm-.6-2H46a7%207%200%20007-7v-.11a3.81%203.81%200%2001-2%20.56H48a2.12%202.12%200%2000-2%202.21V50.8A4.32%204.32%200%200145.4%2053zM41%2017H10a1%201%200%20010-2H41a1%201%200%20010%202z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M51%2C60H13a4%2C4%2C0%2C0%2C1-4-4V26a1%2C1%2C0%2C0%2C1%2C2%2C0V56a2%2C2%2C0%2C0%2C0%2C2%2C2H51a2%2C2%2C0%2C0%2C0%2C2-2V26a1%2C1%2C0%2C0%2C1%2C2%2C0V56A4%2C4%2C0%2C0%2C1%2C51%2C60Z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M42%2C55H13a4.11%2C4.11%2C0%2C0%2C1-4-4.2V10.2A4.11%2C4.11%2C0%2C0%2C1%2C13%2C6H51a4.11%2C4.11%2C0%2C0%2C1%2C4%2C4.2V42.25a4.1%2C4.1%2C0%2C0%2C1-4%2C4.2H48a2.12%2C2.12%2C0%2C0%2C0-2%2C2.21V50.8A4.11%2C4.11%2C0%2C0%2C1%2C42%2C55ZM13%2C8a2.11%2C2.11%2C0%2C0%2C0-2%2C2.2V50.8A2.11%2C2.11%2C0%2C0%2C0%2C13%2C53H42a2.11%2C2.11%2C0%2C0%2C0%2C2-2.2V48.66a4.11%2C4.11%2C0%2C0%2C1%2C4-4.21h3a2.11%2C2.11%2C0%2C0%2C0%2C2-2.2v-32A2.11%2C2.11%2C0%2C0%2C0%2C51%2C8Z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M55%2C21H9V10a4%2C4%2C0%2C0%2C1%2C4-4H51a4%2C4%2C0%2C0%2C1%2C4%2C4ZM11%2C19H53V10a2%2C2%2C0%2C0%2C0-2-2H13a2%2C2%2C0%2C0%2C0-2%2C2Z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Crect%20width%3D%224%22%20height%3D%228%22%20x%3D%2219%22%20y%3D%223%22%20fill%3D%22%2313bfff%22%20class%3D%22colorff8b13%20svgShape%22%20rx%3D%222%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M21%2C12a3%2C3%2C0%2C0%2C1-3-3V5a3%2C3%2C0%2C0%2C1%2C6%2C0V9A3%2C3%2C0%2C0%2C1%2C21%2C12Zm0-8a1%2C1%2C0%2C0%2C0-1%2C1V9a1%2C1%2C0%2C0%2C0%2C2%2C0V5A1%2C1%2C0%2C0%2C0%2C21%2C4Z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Crect%20width%3D%224%22%20height%3D%228%22%20x%3D%2241%22%20y%3D%223%22%20fill%3D%22%2313bfff%22%20class%3D%22colorff8b13%20svgShape%22%20rx%3D%222%22%2F%3E%3Cpath%20fill%3D%22%231f2223%22%20d%3D%22M43%2C12a3%2C3%2C0%2C0%2C1-3-3V5a3%2C3%2C0%2C0%2C1%2C6%2C0V9A3%2C3%2C0%2C0%2C1%2C43%2C12Zm0-8a1%2C1%2C0%2C0%2C0-1%2C1V9a1%2C1%2C0%2C0%2C0%2C2%2C0V5A1%2C1%2C0%2C0%2C0%2C43%2C4Z%22%20class%3D%22color231f20%20svgShape%22%2F%3E%3Cpath%20d%3D%22M29.67%2040.85a1.4%201.4%200%20011.59%201.51c0%201.08-.68%201.51-1.78%201.51h-9a1.78%201.78%200%2001-2-1.77c0-1.71%201.51-3.6%204.51-5.5%203.34-2.11%204.49-2.54%204.49-4.49A2.38%202.38%200%200025%2029.69c-1.53%200-2.57.62-3.09%202.54-.24.89-.56%201.35-1.52%201.35s-1.75-.41-1.75-1.61c0-2.93%202.88-5.16%206.41-5.16%203.84%200%206.12%202.52%206.12%204.73%200%203.19-1.46%204.44-4%205.88-2.71%201.53-4.36%202.52-4.68%203.43zM34%2028.63a1.69%201.69%200%20011.54-1.51h7.2a1.39%201.39%200%20011.58%201.51%201.38%201.38%200%2001-1.53%201.51H36.66L36%2033.74l.05%200a5.18%205.18%200%20013.33-1.1c3%200%205.69%201.82%205.69%205.52%200%203.86-2.78%206-6.62%206-4.16%200-5.69-2.16-5.69-3.4a1.62%201.62%200%20011.73-1.66c1.46%200%201.46%202.33%204%202.33a3.08%203.08%200%20003.08-3.07c0-2-1.44-3-3.24-3s-2.48%201.18-3.68%201.18A1.5%201.5%200%200133%2035a7.23%207.23%200%2001.12-1.28z%22%20class%3D%22color000000%20svgShape%22%20data-name%3D%222%20day%22%2F%3E%3C%2Fsvg%3E"
+          alt=""
+        />
+        <h1 class="text-3xl font-bold lg:text-start ">Experience</h1>
+        <p
+          class="text-center lg:text-start tracking-wider text-gray-600"
+        >
+          Our experience of 25 years of building and making achievements in the
+          world of development
+        </p>
+      </div>
+
+      <div
+        class="px-4 flex flex-col gap-3 items-center lg:items-start my-4 hover-item hover:scale-95 hover:shadow-lg"
+      >
+        <img
+          class="h-16 w-16 group-hover:translate-x-4"
+          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%232D98D4%22%20d%3D%22M22.146%2011.44l-9.414-9.415A3.523%203.523%200%200%200%2010.258%201H3c-1.103%200-2%20.897-2%202v7.257a3.48%203.48%200%200%200%201.025%202.475l9.414%209.414c.551.55%201.284.854%202.061.854s1.51-.303%202.06-.854l6.586-6.585c.551-.55.854-1.282.854-2.061s-.303-1.51-.854-2.06zM5%207a2%202%200%201%201%200-4%202%202%200%200%201%200%204z%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M22.146%2011.44l-9.414-9.415A3.523%203.523%200%200%200%2010.258%201H3c-1.103%200-2%20.897-2%202v.25c0-1.103.897-2%202-2h7.258c.922%200%201.823.374%202.474%201.025%22%20opacity%3D%22.2%22%2F%3E%3Cpath%20fill%3D%22%23010101%22%20d%3D%22M15.56%2021.896c-.55.55-1.283.854-2.06.854s-1.51-.303-2.06-.854l-9.415-9.414A3.48%203.48%200%200%201%201%2010.007v.25a3.48%203.48%200%200%200%201.025%202.475l9.414%209.414c.551.55%201.284.854%202.061.854s1.51-.303%202.06-.854l6.586-6.585-6.585%206.335z%22%20opacity%3D%22.1%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M17.645%2016.23l-.636-.635a2.995%202.995%200%200%200-.577-3.406%203.002%203.002%200%200%200-4.243%200%201.023%201.023%200%200%201-1.414%200%201.002%201.002%200%200%201%200-1.414l1.791-1.792-1.414-1.414-1.084%201.085-.502-.502-1.414%201.414.632.632a2.995%202.995%200%200%200%20.576%203.405c1.133%201.133%203.11%201.135%204.244%200a1.024%201.024%200%200%201%201.414%200c.39.39.39%201.025%200%201.415l-1.813%201.813%201.414%201.414%201.106-1.106.505.506%201.415-1.415z%22%2F%3E%3ClinearGradient%20id%3D%22a%22%20x1%3D%2211.201%22%20x2%3D%2217.597%22%20y1%3D%2211.202%22%20y2%3D%2217.597%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23010101%22%20stop-opacity%3D%22.1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23010101%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20fill%3D%22url(%23a)%22%20d%3D%22M12.19%2012.19a2.992%202.992%200%200%201%202.788-.795l-2.412-2.412-1.79%201.792c-.39.39-.39%201.024%200%201.414a1.023%201.023%200%200%200%201.413%200zm4.242%200c.92.92%201.105%202.29.577%203.405l.636.635-1.415%201.415-.505-.506-1.106%201.106-1.414-1.414%201.813-1.813c.39-.39.39-1.024%200-1.414a1.024%201.024%200%200%200-1.414%200c-1.133%201.134-3.11%201.132-4.244-.001l7.372%207.372%204.243-4.243-4.543-4.543z%22%2F%3E%3ClinearGradient%20id%3D%22b%22%20x1%3D%22-.663%22%20x2%3D%2221.848%22%20y1%3D%226.123%22%20y2%3D%2216.62%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23FFF%22%20stop-opacity%3D%22.2%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FFF%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20fill%3D%22url(%23b)%22%20d%3D%22M22.146%2011.44l-9.414-9.415A3.523%203.523%200%200%200%2010.258%201H3c-1.103%200-2%20.897-2%202v7.257a3.48%203.48%200%200%200%201.025%202.475l9.414%209.414c.551.55%201.284.854%202.061.854s1.51-.303%202.06-.854l6.586-6.585c.551-.55.854-1.282.854-2.061s-.303-1.51-.854-2.06zM5%207a2%202%200%201%201%200-4%202%202%200%200%201%200%204z%22%2F%3E%3C%2Fsvg%3E"
+          alt=""
+        />
+        <h1 class="text-3xl font-bold text-center lg:text-start text-nowrap">
+          Competitive Price
+        </h1>
+        <p
+          class="text-center lg:text-start tracking-wider text-gray-600"
+        >
+          The prices we offer you are very competitive without reducing the
+          quality of the company's work in the slightest
+        </p>
+      </div>
+
+      <div
+        class="px-4 flex flex-col gap-3 items-center lg:items-start my-4 hover-item hover:scale-95 hover:shadow-lg"
+      >
+        <img
+          class="h-16 w-16 group-hover:translate-x-4"
+          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2092%2092%22%3E%3Cpath%20fill%3D%22%2387ddfd%22%20d%3D%22M92%2046c0%2021.5-17.4%2039-38.8%2039-7.9%200-15.5-2.4-22-6.8-1.8-1.3-2.3-3.7-1-5.6%201.3-1.8%203.7-2.3%205.6-1C40.9%2075.1%2047%2077%2053.2%2077%2070.2%2077%2084%2063.1%2084%2046S70.2%2015%2053.2%2015C36.6%2015%2023%2028.3%2022.4%2044.9l9.3-9.4c1.6-1.6%204.1-1.6%205.7%200%201.6%201.6%201.6%204.1%200%205.7L22.1%2056.5c-.8.8-1.8%201.2-2.8%201.2-1.1%200-2.1-.4-2.8-1.2L1.2%2041.1c-1.6-1.6-1.6-4.1%200-5.7%201.6-1.6%204.1-1.6%205.7%200l7.6%207.7C15.9%2023%2032.7%207%2053.2%207%2074.6%207%2092%2024.5%2092%2046zM53%2023.3c-2.2%200-4%201.8-4%204V46c0%201.1.5%202.1%201.3%202.8l8.6%208.6c.8.8%201.8%201.2%202.9%201.2%201%200%202.1-.4%202.8-1.2%201.6-1.6%201.5-4.1-.1-5.7L57%2044.3v-17c0-2.2-1.8-4-4-4z%22%20class%3D%22color000000%20svgShape%22%2F%3E%3C%2Fsvg%3E"
+          alt=""
+        />
+        <h1 class="text-3xl font-bold lg:text-start font-robotoSlab">On Time</h1>
+        <p
+          class="text-center lg:text-start tracking-wider text-gray-600"
+        >
+          We prioritize the quality of our work and finish it on time. There is
+          no procrastination in our dealings.
+        </p>
+      </div>
+
+      <div
+        class="px-4 flex flex-col gap-3 items-center lg:items-start mt-4 mb-6 hover-item hover:scale-95 hover:shadow-lg"
+      >
+        <img
+          class="h-16 w-16 group-hover:translate-x-4"
+          src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20enable-background%3D%22new%200%200%2068%2068%22%20viewBox%3D%220%200%2068%2068%22%3E%3Cpolygon%20fill%3D%22%237edcff%22%20points%3D%228.22%204.653%208.22%2022.294%2016.229%2017.521%2016.229%204.653%22%20class%3D%22colorff7e7e%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%233dbfef%22%20d%3D%22M16.2278%2C4.6543v12.87l-8.01%2C4.77v-8.82c2.77-0.6%2C5.4383-4.78%2C5.4383-8.01c0-0.27-0.02-0.54-0.05-0.81%0A%09%09%09H16.2278z%22%20class%3D%22coloref3d3d%20svgShape%22%2F%3E%3Cpolygon%20fill%3D%22%231abefb%22%20points%3D%2259.102%2021.108%2059.102%2059.385%208.904%2059.385%208.904%2021.108%2034.008%205.732%22%20class%3D%22colorfbc41a%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%2302b3f5%22%20d%3D%22M59.0977%2C21.1043v38.28h-50.19v-6.2304c39.6517-5.0414%2C44.29-35.0396%2C44.29-35.0396l0.12-0.55%0A%09%09%09L59.0977%2C21.1043z%22%20class%3D%22colorf59f02%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%237edcff%22%20d%3D%22M62.7597%2C26.5911c-0.5768%2C0-1.1609-0.1539-1.6892-0.4777L34.0082%2C9.5312L6.9343%2C26.1134%0A%09%09c-1.5258%2C0.9363-3.5192%2C0.455-4.454-1.0703c-0.9348-1.5258-0.4555-3.5197%2C1.0703-4.454L32.3169%2C2.9705%0A%09%09c1.0392-0.6364%2C2.3461-0.6353%2C3.3842%2C0l28.7541%2C17.6187c1.5252%2C0.9348%2C2.0045%2C2.9292%2C1.0697%2C4.4545%0A%09%09C64.9139%2C26.0412%2C63.8495%2C26.5911%2C62.7597%2C26.5911z%22%20class%3D%22colorff7e7e%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23dee4e6%22%20d%3D%22M40.4977%2C41.4143v17.97h-13v-17.97c0-3.59%2C2.92-6.5%2C6.5-6.5h0.01%0A%09%09%09C37.5877%2C34.9143%2C40.4977%2C37.8243%2C40.4977%2C41.4143z%22%20class%3D%22colordee1e6%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23c7ced1%22%20d%3D%22M40.4977%2C41.4143v17.97h-13v-2.36h1.96c3.85%2C0%2C6.97-3.12%2C6.97-6.97v-11c0-1.54-0.53-2.95-1.42-4.06%0A%09%09%09C38.1177%2C35.4743%2C40.4977%2C38.1643%2C40.4977%2C41.4143z%22%20class%3D%22colorc7cbd1%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%2387ddfd%22%20d%3D%22M54.5477%2C31.3113v15.046h-9v-15.046c0-2.484%2C2.016-4.5%2C4.5-4.5c1.242%2C0%2C2.376%2C0.504%2C3.186%2C1.314%0A%09%09%09C54.0437%2C28.9443%2C54.5477%2C30.0693%2C54.5477%2C31.3113z%22%20class%3D%22color4dabf4%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%231da3d5%22%20d%3D%22M54.5477%2C31.3143v15.04h-9v-2.27c2.96-0.13%2C5.31-2.57%2C5.31-5.55v-9.48c0-0.82-0.22-1.57-0.6-2.23%0A%09%09%09c1.16%2C0.05%2C2.22%2C0.54%2C2.98%2C1.3C54.0477%2C28.9443%2C54.5477%2C30.0643%2C54.5477%2C31.3143z%22%20class%3D%22color1d7bd5%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%2387ddfd%22%20d%3D%22M22.4533%2C31.3113v15.046h-9v-15.046c0-2.484%2C2.016-4.5%2C4.5-4.5c1.242%2C0%2C2.376%2C0.504%2C3.186%2C1.314%0A%09%09%09%09C21.9493%2C28.9443%2C22.4533%2C30.0693%2C22.4533%2C31.3113z%22%20class%3D%22color4dabf4%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%231da3d5%22%20d%3D%22M22.4533%2C31.3143v15.04h-9v-2.27c2.96-0.13%2C5.31-2.57%2C5.31-5.55v-9.48c0-0.82-0.22-1.57-0.6-2.23%0A%09%09%09%09c1.16%2C0.05%2C2.22%2C0.54%2C2.98%2C1.3C21.9533%2C28.9443%2C22.4533%2C30.0643%2C22.4533%2C31.3143z%22%20class%3D%22color1d7bd5%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M39.4977%2C22.2943c0%2C3.036-2.453%2C5.5-5.5%2C5.5c-3.036%2C0-5.5-2.464-5.5-5.5c0-3.047%2C2.464-5.5%2C5.5-5.5%0A%09%09%09C37.0447%2C16.7943%2C39.4977%2C19.2473%2C39.4977%2C22.2943z%22%20class%3D%22colorffffff%20svgShape%22%2F%3E%3Cpath%20fill%3D%22%23dee4e6%22%20d%3D%22M39.4977%2022.2943c0%203.04-2.45%205.5-5.5%205.5-2.81%200-5.12-2.1-5.45-4.82.76.41%201.64.64%202.56.64%203.05%200%205.5-2.47%205.5-5.5%200-.23-.0099-.47-.05-.69C38.3077%2018.3343%2039.4977%2020.1743%2039.4977%2022.2943zM2.0027%2060.3843v4.1093c0%20.5523.4477%201%201%201h62c.5523%200%201-.4477%201-1v-4.1093c0-.5523-.4477-1-1-1h-62C2.4505%2059.3843%202.0027%2059.832%202.0027%2060.3843z%22%20class%3D%22colordee1e6%20svgShape%22%2F%3E%3Cpath%20d%3D%22M45.55%2047.3575h9c.55%200%201-.45%201-1v-15.05c0-3.0013-2.4215-5.5-5.5-5.5-3.04%200-5.5%202.47-5.5%205.5v15.05C44.55%2046.9075%2045%2047.3575%2045.55%2047.3575zM46.55%2031.3075c0-1.93%201.57-3.5%203.5-3.5%201.9735%200%203.5%201.6116%203.5%203.5v14.05h-7V31.3075zM13.45%2047.3575h9c.56%200%201-.45%201-1v-15.05c0-2.9897-2.3884-5.5-5.5-5.5-3.03%200-5.5%202.47-5.5%205.5v15.05C12.45%2046.9075%2012.9%2047.3575%2013.45%2047.3575zM14.45%2031.3075c0-1.93%201.5699-3.5%203.5-3.5%201.933%200%203.5%201.551%203.5%203.5v14.05h-7V31.3075zM45.5475%2051.85h9c.5522%200%201-.4478%201-1s-.4478-1-1-1h-9c-.5522%200-1%20.4478-1%201S44.9953%2051.85%2045.5475%2051.85zM22.4533%2049.85h-9c-.5522%200-1%20.4478-1%201s.4478%201%201%201h9c.5522%200%201-.4478%201-1S23.0055%2049.85%2022.4533%2049.85zM34%2028.7975c3.58%200%206.5-2.92%206.5-6.5%200-3.59-2.92-6.5-6.5-6.5-3.59%200-6.5%202.91-6.5%206.5C27.5%2025.8775%2030.41%2028.7975%2034%2028.7975zM34%2017.7975c2.48%200%204.5%202.02%204.5%204.5s-2.02%204.5-4.5%204.5c-2.48%200-4.5-2.02-4.5-4.5S31.52%2017.7975%2034%2017.7975z%22%20class%3D%22color000000%20svgShape%22%2F%3E%3Cpath%20d%3D%22M65%2C58.3875h-4.9v-31.7l0.45%2C0.28c1.91%2C1.17%2C4.55%2C0.68%2C5.83-1.4c1.2-1.98%2C0.61-4.59-1.4-5.83l-28.76-17.62%0A%09%09%09%09c-1.33-0.82-3.09-0.82-4.43%2C0l-14.56%2C8.92V5.6527h0.5417c0.5522%2C0%2C1-0.4478%2C1-1s-0.4478-1-1-1H6.6774c-0.5522%2C0-1%2C0.4478-1%2C1%0A%09%09%09%09s0.4478%2C1%2C1%2C1H7.22v11.5148l-4.19%2C2.57c-2.04%2C1.24-2.6%2C3.85-1.4%2C5.83c1.28%2C2.08%2C3.92%2C2.5699%2C5.83%2C1.4l0.44-0.27v31.6899H3%0A%09%09%09%09c-1.1%2C0-2%2C0.89-2%2C2v4.11c0%2C1.1%2C0.9%2C2%2C2%2C2h62c1.11%2C0%2C2-0.9%2C2-2v-4.11C67%2C59.2775%2C66.11%2C58.3875%2C65%2C58.3875z%20M9.22%2C5.6575h6.01%0A%09%09%09%09v6.61l-6.01%2C3.6801V5.6575z%20M6.41%2C25.2575c-1.03%2C0.6299-2.45%2C0.28-3.08-0.7401c-0.59-0.98-0.38-2.38%2C0.74-3.08%0A%09%09%09%09c9.779-5.9829%2C28.6086-17.5113%2C28.77-17.61c0.35-0.22%2C0.76-0.33%2C1.17-0.33c0.41%2C0%2C0.82%2C0.11%2C1.17%2C0.33l28.75%2C17.61%0A%09%09%09%09c1.1%2C0.69%2C1.37%2C2.08%2C0.74%2C3.08c-0.62%2C1.02-2.05%2C1.37-3.08%2C0.7401c-6.07-3.72-20.5099-12.57-27.58-16.9%0A%09%09%09%09C-5.3102%2C32.4287%2C54.2029-4.0002%2C6.41%2C25.2575z%20M9.9%2C25.4775l24.11-14.77l24.09%2C14.76v32.92H41.5v-16.97c0-4.14-3.36-7.5-7.5-7.5%0A%09%09%09%09s-7.5%2C3.36-7.5%2C7.5v16.97H9.9V25.4775z%20M39.5%2C58.3875h-11v-16.97c0-3.04%2C2.47-5.5%2C5.51-5.5c3.02%2C0%2C5.49%2C2.46%2C5.49%2C5.5V58.3875z%0A%09%09%09%09%20M65%2C64.4975H3v-4.11c19.7319%2C0%2C43.7718%2C0%2C62%2C0V64.4975z%22%20class%3D%22color000000%20svgShape%22%2F%3E%3C%2Fsvg%3E"
+          alt=""
+        />
+        <h1 class="text-3xl font-bold lg:text-start font-robotoSlab" >Best Materials</h1>
+        <p
+          class="text-center lg:text-start tracking-wider text-gray-600"
+        >
+          The prices we offer you are very competitive. The material determines
+          the building itself so we recommend you our best material.
+        </p>
+      </div>
+      
+    </section>
+
+    <!-- Dianne Russell -->
+    <div
+      class="min-h-[600px] flex items-center lg:flex-row flex-col lg:mx-32 lg:my-6 md:mx-12 md:my-8"
+    >
+      <section
+        class="md:min-h-[700px] md:flex md:items-center md:relative basis-[60%] bg-white gap-4 items-center relative"
+      >
+        <div>
+          <img
+            class="h-96 w-[650px] md:h-[700px] md:w-[600px]"
+            src="/images/Dianne Russell.jpeg"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="max-w-80 absolute top-[250px] left-[55px] md:absolute md:top-[100px] md:left-[400px] md:max-w-64 md:max-h-[600px] md:my-0 bg-gradient-to-r from-slate-800 to-slate-950 text-white flex flex-col gap-3 items-center my-8 p-4 group hover:scale-110 hover:shadow-gray-900"
+        >
+          <img
+            class="h-28 w-28 rounded-[50%] group-hover:scale-105"
+            src="/images/Dianne Russell (2).jpeg"
+            alt=""
+          />
+          <h1 class="text-xl font-bold">Diannne Russell</h1>
+          <p class="text-center text-sm tracking-wide font-bold text-gray-400">
+            More than 20 years of experience in the fieldarchitecture and has
+            worked on project up to 100+
+          </p>
+        </div>
+      </section>
+
+      <!-- meet and talk -->
+      <section class="  font-robotoSlab px-3 basis-[40%] mt-24 lg:mt-0 bg-white">
+        <div>
+          <h1 class="text-2xl font-bold py-3 text-center md:text-start">
+            Meet and talk with our best architechture.
+          </h1>
+          <p
+            class="text-xl tracking-wide text-center md:text-start text-gray-600"
+          >
+            All our teams are professional and competent in their fields and
+            will help you realize your dream building with the excellent result.
+          </p>
+        </div>
+
+        <div class="my-5 mx-1 bg-white flex justify-between items-center">
+          <button
+            class="px-4 py-2 bg-gradient-to-r from-slate-800 to-slate-950 text-white hover:scale-105 "
+          >
+            See team.
+          </button>
+          <p class="text-2xl flex items-center gap-3">
+            How it works
+            <img
+              class="h-6 w-6"
+              src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2018%2014%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%230d1213%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M1%207h16M11%201l6%206-6%206%22%20class%3D%22colorStroke000000%20svgStroke%22%2F%3E%3C%2Fsvg%3E"
+              alt=""
+            />
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- our story -->
+    <div
+      class="flex items-center lg:gap-44 gap-6 lg:flex-row flex-col m-10 lg:mx-32 lg:my-10 md:mx-12 md:my-8"
+    >
+      <!-- our tsory text -->
+      <section class="max-w-[100%] basis-[50%] bg-white">
+        <div class="text-start font-robotoSlab">
+          <h1 class="text-3xl font-bold hover-item1">Our Story, Who we are.</h1>
+          <p class="text-xl py-4  text-gray-600">
+            Established in 1992, PT. Wahana Cipta operates as a General
+            Contracting company with a footprint that we have planted throughout
+            Indonesia. Initially, we focused on construction in the field of
+            residential housing development in Jakarta. As the company grows,
+            now we are present as a reliable.
+          </p>
+          <button
+            class="px-4 py-2  text-white hover:scale-105 bg-gradient-to-r from-sky-300 to-sky-600"
+          >
+            See More
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <img
+            class="h-96 w-96 hover:scale-95 duration-[0.5s] shadow-lg rounded-lg"
+            src="/images/ourstory.jpeg"
+            alt=""
+          />
+        </div>
+      </section>
+    </div>
+
+    <!-- our collection  -->
+    <section
+      class="bg-white max-w-[100%] m-10 lg:mx-32 lg:my-10 md:mx-16 md:my-8"
+    >
+      <div>
+        <h1 class="text-2xl font-bold sm:text-3xl font-robotoSlab hover-item2">Our Collection</h1>
+        <div class="grid grid-cols-2 gap-3 py-3 lg:grid-cols-4">
+          <img
+            class="h-60 shadow-lg py-3 hover:scale-95 w-72"
+            src="/images/c1.jpeg"
+            alt=""
+          />
+          <img
+            class="h-60 shadow-lg py-3 hover:scale-95 w-72"
+            src="/images/c2.jpeg"
+            alt=""
+          />
+          <img
+            class="h-60 shadow-lg py-3 hover:scale-95 w-72"
+            src="/images/c3.jpeg"
+            alt=""
+          />
+          <img
+            class="h-60 shadow-lg py-3 hover:scale-95 w-72"
+            src="/images/c4.jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gradient-to-r from-slate-700 to-slate-950">
+      <div class="mx-auto max-w-[80%]">
+        <div class="py-8 text-white sm:py-4 mx-3 font-robotoSlab">
+          <h1 class="text-2xl font-bold " >Elite Estate Management</h1>
+          <p>
+            is a general contractor company based in Jakarta. More than 25 years
+            of experience in building and carving out Indonesia's development.
+          </p>
+        </div>
+
+        <div class="flex">
+          <img
+            class="sm:h-14 sm:w-14 py-4 h-16 w-16"
+            src="/images/twitter.svg"
+            alt=""
+          />
+          <img
+            class="sm:h-14 sm:w-14 py-4 h-16 w-16 "
+            src="/images/insta.svg"
+            alt=""
+          />
+          <img
+            class="sm:h-14 sm:w-14 py-4 h-16 w-16"
+            src="/images/linkedin.svg"
+            alt=""
+          />
+          <img
+            class="sm:h-14 sm:w-14 py-4 h-16 w-16"
+            src="/images/google.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
